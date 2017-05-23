@@ -16,7 +16,7 @@ public class RandomUtil {
     public static int randomInt(int end) {
         if (end < 1)
             return -1;
-        int index = random.nextInt(end);
+        int index = random.nextInt(end);;
         return index;
     }
 
