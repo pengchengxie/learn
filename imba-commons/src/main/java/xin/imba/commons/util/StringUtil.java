@@ -2,12 +2,14 @@ package xin.imba.commons.util;
 
 import org.apache.commons.lang3.StringUtils;
 
+import java.util.UUID;
+
 /**
  * 字符串工具类
  * <p>
  * Created by xiepengcheng on 2017/4/24.
  */
-public class StringUtil {
+public final class StringUtil {
 
     /**
      * 判断字符串是否为空
@@ -46,5 +48,13 @@ public class StringUtil {
             strings = StringUtils.split(str, separatorChars);
         }
         return strings;
+    }
+
+    /**
+     * 获取唯一ID，策略为UUID去掉“-”
+     * @return
+     */
+    public static String getUID() {
+        return UUID.randomUUID().toString().replace("-","");
     }
 }

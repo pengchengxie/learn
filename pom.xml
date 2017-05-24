@@ -12,6 +12,7 @@
         <module>imba-parent</module>
         <module>imba-commons</module>
         <module>imba-filter</module>
+        <module>imba-data</module>
     </modules>
 
 </project>

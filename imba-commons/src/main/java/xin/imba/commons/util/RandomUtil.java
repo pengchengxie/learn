@@ -9,7 +9,7 @@ import java.util.Random;
  * <p>
  * Created by xiepengcheng on 2016/10/23.
  */
-public class RandomUtil {
+public final class RandomUtil {
 
     private final static Random random = new Random();
 
