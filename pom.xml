@@ -13,6 +13,7 @@
         <module>imba-commons</module>
         <module>imba-filter</module>
         <module>imba-data</module>
+        <module>imba-tools</module>
     </modules>
 
 </project>
