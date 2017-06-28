@@ -13,11 +13,29 @@ public final class RandomUtil {
 
     private final static Random random = new Random();
 
+    /**
+     * 获取end以内的随机数，如end=100贼返回0~99的随机数
+     * @param end
+     * @return
+     */
     public static int randomInt(int end) {
         if (end < 1)
             return -1;
         int index = random.nextInt(end);;
         return index;
+    }
+
+    /**
+     * 随机获取数组元素
+     *
+     * @param array
+     * @param <T>
+     * @return
+     */
+    public static <T> T randomArrayElement(T[] array) {
+        if (array == null || array.length < 1)
+            return null;
+        return array[randomInt(array.length)];
     }
 
     /**
