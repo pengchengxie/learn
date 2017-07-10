@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd ">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>xin.imba.web</groupId>
+    <artifactId>imba-navigation</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>imba-navigation</name>
+    <packaging>war</packaging>
+
+    <profiles>
+        <profile>
+            <!-- 本地参数 -->
+            <id>windows</id>
+            <activation>
+                <os>
+                    <family>windows</family>
+                </os>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-war-plugin</artifactId>
+                        <version>2.6</version>
+                        <configuration>
+                            <classifier>win</classifier>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+            <properties>
+
+            </properties>
+        </profile>
+
+        <profile>
+            <!-- Linux环境下通用参数 -->
+            <id>linux</id>
+            <activation>
+                <os>
+                    <family>unix</family>
+                </os>
+            </activation>
+            <build>
+                <testResources>
+                    <testResource>
+                        <directory>src/main/resources</directory>
+                        <filtering>true</filtering>
+                    </testResource>
+                </testResources>
+            </build>
+        </profile>
+        <profile>
+            <!-- 技术测试测试 -->
+            <id>dev</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-war-plugin</artifactId>
+                        <version>2.6</version>
+                        <configuration>
+                            <classifier>dev</classifier>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+            <properties>
+
+            </properties>
+        </profile>
+    </profiles>
+
+    <dependencies>
+
+    </dependencies>
+</project>

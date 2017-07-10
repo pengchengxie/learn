@@ -6,7 +6,7 @@ import java.io.IOException;
 
 /**
  * 并发测试基类
- * Created by xiepengcheng on 2016/8/22..
+ * Created by xiepengcheng on 2016/8/22.
  */
 public class BasePressureTest {
     /**
@@ -22,7 +22,7 @@ public class BasePressureTest {
     /**
      * 单个线程请求时间间隔
      */
-    protected static final int THREAD_SLEEP_TIME = 8;
+    protected static final int THREAD_SLEEP_TIME = 800;
 
     /**
      * 日志文件存储路径

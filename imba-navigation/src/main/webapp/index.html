@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>艾米导航</title>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta name="Keywords" content="艾米导航"/>
+    <meta name="Description" content="艾米导航"/>
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="./css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/frontstyle.css">
+
+    <script src="./js/jquery-3.1.0.min.js"></script>
+    <script src="./js/jquery-migrate-3.0.0.min.js"></script>
+
+    <style type="text/css">
+        body {
+            /*背景照片*/
+            background-image: url(http://file.imba.xin/navigationimg/2017/3/6/backimg.jpg?Expires=9483865149467&OSSAccessKeyId=LTAIu9Fx38MWbPoa&Signature=xFzptF%2Bn%2F59D4iImvmSG6oLPDig%3D);
+
+            z-index: -1;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+<!--
+    描述：搜索框以及 LOGO
+-->
+<div class="container">
+    <div class="row LOGO">
+        <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3">
+            <a href="./index.html"><img id="LOGO"
+                                        src="http://file.imba.xin/navigationimg/2017/3/6/logo.png?Expires=9483865149467&OSSAccessKeyId=LTAIu9Fx38MWbPoa&Signature=J6WS%2F5cIObjmYRZJNkEP6%2FgwO8s%3D"
+                                        alt="Responsive image"></a>
+        </div>
+    </div>
+    <p></p>
+
+    <div class="input-group input-group-lg">
+        <span class="input-group-addon"></span>
+        <form action="http://www.baidu.com/s" method="get" target="_blank">
+            <input type="text" class="form-control" name="search" id="search" placeholder="输入关键词，回车或点击下方相应按钮，即可检索">
+    </div>
+    <P>
+    <center>
+        <input type="submit" value="百度" id="baidu" button type="button" class="btn btn-primary"/>
+        <input type="submit" value="谷歌" id="google" button type="button" class="btn btn-primary"/>
+    </center>
+    </P>
+    </form>
+</div>
+
+<div style="height: 40px"></div>
+
+<script>
+    var sAddress = document.getElementsByTagName("form")[0];
+    var sInfor = document.getElementById("search");
+    var sBaidu = document.getElementById("baidu");
+    var sGoogle = document.getElementById("google");
+
+    //百度
+    sBaidu.onclick = function () {
+        sAddress.action = "http://www.baidu.com/s";
+        sInfor.name = "wd";
+    }
+
+    //Google
+    sGoogle.onclick = function () {
+        sAddress.action = "http://www.google.com/search";
+        sInfor.name = "q";
+    };
+</script>
+
+<div class="container">
+    <table class="table table-striped table-bordered table-hover acitve ">
+        <thead>
+        <tr class="center">
+            <th id="dingbu" colspan="5">IT 技术</th>
+            <th id="dingbu" colspan="5">生活日常</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr style="background: rgba(45, 43, 43, 0.43);">
+            <td align="center" id="fenlei1">推荐</td>
+            <td align="center"><a href="http://www.bejson.com/" target="_blank" id="lianjie">JSON校验</a></td>
+            <td align="center"><a href="http://www.atool.org/file_hash.php/" target="_blank" id="lianjie">文件HASH</a></td>
+            <td align="center"><a href="https://github.com/" target="_blank" id="lianjie">GitHub</a></td>
+            <td align="center"><a href="http://mvnrepository.com/" target="_blank" id="lianjie">Maven仓库</a></td>
+            <td align="center"><a href="http://www.csdn.net/" target="_blank" id="lianjie">CSDN</a></td>
+            <td align="center"><a href="https://movie.douban.com/chart" target="_blank" id="lianjie">豆瓣电影</a></td>
+            <td align="center"><a href="http://music.163.com/#/playlist?id=3778678" target="_blank" id="lianjie">网易音乐</a></td>
+            <td align="center"><a href="https://www.jd.com/" target="_blank" id="lianjie">京东商城</a></td>
+            <td></td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr style="background: rgba(45, 43, 43, 0.43);">
+            <td align="center" id="fenlei">社区</td>
+            <td align="center"><a href="https://www.oschina.net/" target="_blank" id="lianjie">开源中国</a></td>
+            <td align="center"><a href="http://www.51cto.com/" target="_blank" id="lianjie">51CTO</a></td>
+            <td align="center"><a href="http://www.iteye.com/" target="_blank" id="lianjie">ITEye</a></td>
+            <td align="center"><a href="http://www.cnblogs.com/" target="_blank" id="lianjie">博客园</a></td>
+            <td align="center" id="fenlei">社交</td>
+            <td align="center"><a href="http://weibo.com/" target="_blank" id="lianjie">微博</a></td>
+            <td align="center"><a href="https://www.zhihu.com/" target="_blank" id="lianjie">知乎</a></td>
+            <td align="center"><a href="http://tieba.baidu.com/" target="_blank" id="lianjie">百度贴吧</a></td>
+            <td align="center"><a href="http://www.renren.com/" target="_blank" id="lianjie">人人网</a></td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr style="background: rgba(45, 43, 43, 0.43);">
+            <td align="center" id="fenlei">社区</td>
+            <td align="center"><a href="https://yq.aliyun.com/" target="_blank" id="lianjie">云栖社区</a></td>
+            <td align="center"><a href="http://tech.meituan.com/" target="_blank" id="lianjie">美团技术</a></td>
+            <td align="center"><a href="http://www.w3school.com.cn/" target="_blank" id="lianjie">w3school</a></td>
+            <td align="center"><a href="http://open.163.com/" target="_blank" id="lianjie">网易公开课</a></td>
+            <td align="center" id="fenlei">资讯</td>
+            <td align="center"><a href="http://news.163.com/" target="_blank" id="lianjie">网易新闻</a></td>
+            <td align="center"><a href="http://news.qq.com/" target="_blank" id="lianjie">腾讯新闻</a></td>
+            <td align="center"><a href="http://www.toutiao.com/" target="_blank" id="lianjie">今日头条</a></td>
+            <td align="center"><a href="http://weixin.sogou.com/" target="_blank" id="lianjie">微信热门</a></td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr style="background: rgba(45, 43, 43, 0.43);">
+            <td align="center" id="fenlei">邮箱</td>
+            <td align="center"><a href="https://mail.qq.com/" target="_blank" id="lianjie">腾讯邮箱</a></td>
+            <td align="center"><a href="http://email.163.com/" target="_blank" id="lianjie">网易邮箱</a></td>
+            <td align="center"><a href="https://mail.google.com/" target="_blank" id="lianjie">谷歌邮箱</a></td>
+            <td align="center"><a href="https://cn.overview.mail.yahoo.com/" target="_blank" id="lianjie">雅虎邮箱</a></td>
+            <td align="center" id="fenlei">指数</td>
+            <td align="center"><a href="http://top.baidu.com/" target="_blank" id="lianjie">百度热搜</a></td>
+            <td align="center"><a href="http://s.weibo.com/top/summary" target="_blank" id="lianjie">微博热搜</a></td>
+            <td align="center"><a href="http://www.cbooo.cn/" target="_blank" id="lianjie">票房指数</a></td>
+            <td align="center"><a href="https://top.taobao.com/" target="_blank" id="lianjie">淘宝指数</a></td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr style="background: rgba(45, 43, 43, 0.43);">
+            <td align="center" id="fenlei">软件</td>
+            <td align="center"><a href="http://rj.baidu.com/" target="_blank" id="lianjie">百度软件</a></td>
+            <td align="center"><a href="https://xbeta.info/" target="_blank" id="lianjie">善用佳软</a></td>
+            <td align="center"><a href="http://www.appinn.com/" target="_blank" id="lianjie">小众软件</a></td>
+            <td align="center"><a href="http://sspai.com/" target="_blank" id="lianjie">少数派</a></td>
+            <td align="center" id="fenlei">求职</td>
+            <td align="center"><a href="http://www.lagou.com/" target="_blank" id="lianjie">拉勾</a></td>
+            <td align="center"><a href="http://zhaopin.com" target="_blank" id="lianjie">智联招聘</a></td>
+            <td align="center"><a href="http://www.51job.com/" target="_blank" id="lianjie">前程无忧</a></td>
+            <td align="center"><a href="http://www.yingjiesheng.com/" target="_blank" id="lianjie">应届生</a></td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr style="background: rgba(45, 43, 43, 0.43);">
+            <td align="center" id="fenlei">设计</td>
+            <td align="center"><a href="http://so.ui001.com/" target="_blank" id="lianjie">搜素材</a></td>
+            <td align="center"><a href="http://www.zcool.com.cn/" target="_blank" id="lianjie">站酷</a></td>
+            <td align="center"><a href="http://image.baidu.com/" target="_blank" id="lianjie">百度图片</a></td>
+            <td align="center"><a href="http://sucai.sogou.com/" target="_blank" id="lianjie">搜狗素材</a></td>
+            <td align="center" id="fenlei">其它</td>
+            <td align="center"><a href="https://pan.baidu.com" target="_blank" id="lianjie">百度云</a></td>
+            <td align="center"><a href="https://mp.weixin.qq.com/" target="_blank" id="lianjie">微信公众号</a></td>
+            <td align="center"><a href="https://app.yinxiang.com/Login.action" target="_blank" id="lianjie">印象笔记</a></td>
+            <td align="center"><a href="http://360kan.letv.com/live" target="_blank" id="lianjie">电视直播</a></td>
+        </tr>
+        </tbody>
+
+    </table>
+    <!--描述：这里是根据设备尺寸选择自动隐藏的内容 -->
+    <div class="hidden-xs"></div>
+</div>
+
+
+<center>
+    <div id="bottom_container" class="s-bottom-ctner">
+        <a style="color:#999" href="http://blog.csdn.net/ifwinds/" target="_blank">个人博客</a>&nbsp&nbsp|&nbsp
+        <a style="color:#999" href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备16062267号</a>
+    </div>
+</center>
+
+</body>
+
+</html>
